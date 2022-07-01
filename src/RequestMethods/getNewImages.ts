@@ -1,5 +1,3 @@
-import {ICard} from "../types/data";
-
 function getNewImages<ICard>( url: string, config: RequestInit = {} ): Promise<ICard>
 {
     return fetch(url, config)

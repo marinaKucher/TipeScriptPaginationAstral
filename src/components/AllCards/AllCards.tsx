@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from "../Card/Card"
-import { ICard,ICardListProps } from "../../types/data"
+import { ICard,ICardListProps } from "../../types/types"
 import {css} from "@emotion/css";
 import getCurrentDate from "../../getCurrentDate";
 

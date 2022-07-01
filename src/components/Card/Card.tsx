@@ -1,7 +1,7 @@
 import './Card.css';
 import React from 'react';
 import styled from '@emotion/styled'
-import { ICardProps,IProps } from "../../types/data"
+import { ICardProps,IProps } from "../../types/types"
 
 const Card : React.FC<ICardProps> = (props ) => {
     const [heartLiked, setHeartLiked] = React.useState<boolean>(false);

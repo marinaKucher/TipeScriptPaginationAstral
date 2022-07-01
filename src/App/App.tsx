@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import './App.css';
-import AllCards from "../src/components/AllCards/AllCards"
-import { ICard } from "./types/data"
-import getNewImages from "./RequestMethods/getNewImages";
+import AllCards from "../components/AllCards/AllCards"
+import { ICard } from "../types/types"
+import getNewImages from "../RequestMethods/getNewImages";
 
 let arrRequest:Array<ICard>=[]
 

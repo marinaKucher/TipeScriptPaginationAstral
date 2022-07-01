@@ -1,11 +1,11 @@
 
 /*--------body-----------------------------------------------------------------------------------------------------*/
 body {
-    font-family:'Grechen Fuemen', cursive;/*шрифт из установленных в гугл шрифтах - имеет линки в html*/
-    font-size: 14px; /*стандартный размер шрифта*/
+    font-family:'Grechen Fuemen', cursive;
+    font-size: 14px;
     color: rgb(238, 238, 238);
-    line-height: 1.6; /*стандартный оттуп меду строчками*/
-    margin: 0; /*убираем все мержины*/
+    line-height: 1.6;
+    margin: 0;
 }
 
 *,
@@ -13,7 +13,6 @@ body {
 *:before {
     box-sizing: border-box;
     /*
-
     border-box говорит браузеру учитывать любые
     границы и внутренние отступы в значениях,
     которые вы указываете в ширине и высоте элемента.
@@ -30,11 +29,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* justify-content: flex-start;*/
     position: relative;
-
-    width: 100%;/*высота будет занимать сто процентов высоты блока посетителя сайта*/
-
+    width: 100%;
     background-color: rgb(255, 255, 255);
     background-size: 100% auto;
 }
@@ -90,11 +86,9 @@ body {
     width: 100px;
     height:10vh;
     background-color: rgba(31, 76, 199, 0.74);
-
     border-width: 1px;
     border-style: dashed;
     border-color: white;
-
     font-family: 'Antic Slab', serif;
     font-size: 13px;
     font-weight:100;
