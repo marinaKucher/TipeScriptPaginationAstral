@@ -1,16 +1,7 @@
 import './Card.css';
 import React from 'react';
 import styled from '@emotion/styled'
-
-export interface ICardProps{
-    imageUrl:string;
-    dateOfCreation:string;
-}
-
-type IProps={
-    liked:boolean
-}
-
+import { ICardProps,IProps } from "../../types/data"
 
 const Card : React.FC<ICardProps> = (props ) => {
     const [heartLiked, setHeartLiked] = React.useState<boolean>(false);
@@ -19,10 +10,10 @@ const Card : React.FC<ICardProps> = (props ) => {
         `color: ${props => ( props.liked === true ? 'red' : 'black')};
          margin-bottom: 2%
         `
-
     function changeLiked (){
         setHeartLiked(!heartLiked)
     }
+
     return (
         <div className="card" >
             <div className="cardContentContainer">
@@ -32,8 +23,6 @@ const Card : React.FC<ICardProps> = (props ) => {
             </div>
         </div>
     )
-
 }
-
 
 export default Card

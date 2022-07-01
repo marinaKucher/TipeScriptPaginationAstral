@@ -1,13 +1,8 @@
 import React from 'react';
 import Card from "../Card/Card"
-import { ICard } from "../../types/data"
+import { ICard,ICardListProps } from "../../types/data"
 import {css} from "@emotion/css";
 import getCurrentDate from "../../getCurrentDate";
-
-
-interface ICardListProps{
-   items : ICard[]
-}
 
 const CardList : React.FC<ICardListProps> = (props ) => {
    return <div className={css`
