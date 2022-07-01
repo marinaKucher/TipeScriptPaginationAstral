@@ -18,8 +18,10 @@ const Card : React.FC<ICardProps> = (props ) => {
         <div className="card" >
             <div className="cardContentContainer">
                 <img className="cardImg" src={props.imageUrl} alt="здесь ожидалась картинка" />
+                <div className="textAndLikeContainer">
                 <span className="cardText">Дата добавления: <br/> {props.dateOfCreation}</span>
                 <I liked={heartLiked} className="fa fa-heart"  aria-hidden="true" onClick={changeLiked} />
+                </div>
             </div>
         </div>
     )
