@@ -1,10 +1,10 @@
-const months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"]
-
 function getCurrentDate(id:number): string{
     let date= new Date();
-    date.setDate(date.getDate() + id);
-    let dateOfCreation;
-    dateOfCreation = String(date.getDate()) +" " + months[date.getMonth()] +" "+ date.getFullYear();
-    return  dateOfCreation;
+    date.setDate(date.getDate() + id-1);
+    return (date.toLocaleString("ru", {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    }));
 }
 export default getCurrentDate

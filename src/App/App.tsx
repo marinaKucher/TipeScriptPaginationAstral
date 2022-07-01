@@ -8,6 +8,12 @@ let arrRequest:Array<ICard>=[]
 
 function App() {
     console.log("запущено")
+
+
+
+
+
+
     const [images,setImages] = useState<Array<ICard>>([]);
     const [currentPage,setCurrentPage] = useState<number>(1);
     const [fetching,setFetching] = useState<boolean>(true);
