@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+
+/*--------body-----------------------------------------------------------------------------------------------------*/
+body {
+    font-family:'Grechen Fuemen', cursive;/*шрифт из установленных в гугл шрифтах - имеет линки в html*/
+    font-size: 14px; /*стандартный размер шрифта*/
+    color: rgb(238, 238, 238);
+    line-height: 1.6; /*стандартный оттуп меду строчками*/
+    margin: 0; /*убираем все мержины*/
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    /*
+
+    border-box говорит браузеру учитывать любые
+    границы и внутренние отступы в значениях,
+    которые вы указываете в ширине и высоте элемента.
+    Если вы выставите элементу ширину 100 пикселей,
+    то эти 100 пикселей будут включать в себя границы
+    и внутренние отступы, а контент сожмётся,
+    чтобы выделить для них место. Обычно это
+    упрощает работу с размерами элементов.
+  */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: flex-start;*/
+    position: relative;
+
+    width: 100%;/*высота будет занимать сто процентов высоты блока посетителя сайта*/
+
+    background-color: rgb(255, 255, 255);
+    background-size: 100% auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.maincontant{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.cardcontainer
+{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+.cardcontent{
+    width: 100%;
+    height: 90%;
+    border-width: 1px;
+    border-style: dashed;
+    border-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer{
+    width: 100%;
+    height:30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    border-width: 1px;
+    border-style: dashed;
+    border-color: white;
+
 }
+
+.footerbutton{
+    width: 100px;
+    height:10vh;
+    background-color: rgba(31, 76, 199, 0.74);
+
+    border-width: 1px;
+    border-style: dashed;
+    border-color: white;
+
+    font-family: 'Antic Slab', serif;
+    font-size: 13px;
+    font-weight:100;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.footerbutton:hover{
+    background-color: rgb(5, 24, 131);
+}
+
+
+
