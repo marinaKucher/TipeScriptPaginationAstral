@@ -2,25 +2,11 @@ import React, {useState} from 'react';
 import './App.css';
 import AllCards from "../src/components/AllCards/AllCards"
 import { ICard } from "./types/data"
+import getNewImages from "./RequestMethods/getNewImages";
 
-let hk:ICard  = {
-    albumId: 1,
-    id: 1,
-    thumbnailUrl: 'https://via.placeholder.com/600/24f355',
-    title: 'string',
-    url: 'string'
-}
 
-let hr:ICard  = {
-    albumId: 1,
-    id: 1,
-    thumbnailUrl: 'https://via.placeholder.com/600/24f355',
-    title: 'string',
-    url: 'string'
-}
 
-let arrHK:Array<ICard>=[hk,hk,hk,hk,hk,hk]
-let arrHR:Array<ICard>=[hr,hr,hr,hr,hr,hr]
+let arrRequest:Array<ICard>=[]
 
 function App() {
     const [images,setImages] = useState<Array<ICard>>([]);
@@ -28,16 +14,18 @@ function App() {
     const [fetching,setFetching] = useState<boolean>(true);
 
     React.useEffect(() => {
-        console.log("зашел сюда")
 
+        getNewImages<ICard[]>('https://jsonplaceholder.typicode.com/photos?_limit=6&_page='+currentPage.toString()).then(
+            (data) => {
+                arrRequest=data
+                setImages(images.concat(arrRequest))
+            }
+        )
     }, [fetching]);
 
 
     const buttonHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
-
         event.preventDefault();
-        arrHK=arrHK.concat(arrHR)
-        setImages(arrHK)
         setFetching(!fetching)
         setCurrentPage(currentPage+1)
     };

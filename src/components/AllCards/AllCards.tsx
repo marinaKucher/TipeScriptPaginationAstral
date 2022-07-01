@@ -2,6 +2,7 @@ import React from 'react';
 import Card from "../Card/Card"
 import { ICard } from "../../types/data"
 import {css} from "@emotion/css";
+import getCurrentDate from "../../getCurrentDate";
 
 
 interface ICardListProps{
@@ -24,7 +25,7 @@ const CardList : React.FC<ICardListProps> = (props ) => {
     `}>
        {
            props.items.map( item =>
-               <Card key={item.id}  dateOfCreation={item.title} imageUrl={item.thumbnailUrl} />
+               <Card key={ props.items.indexOf(item)}  dateOfCreation={getCurrentDate(item.id)} imageUrl={item.thumbnailUrl} />
            )
        }
    </div>
