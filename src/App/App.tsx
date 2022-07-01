@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import AllCards from "../components/AllCards/AllCards"
+import CardList from "../components/AllCards/CardList"
 import { ICard } from "../types/types"
 import getNewImages from "../RequestMethods/getNewImages";
 
@@ -9,17 +9,12 @@ let arrRequest:Array<ICard>=[]
 function App() {
     console.log("запущено")
 
-
-
-
-
-
     const [images,setImages] = useState<Array<ICard>>([]);
     const [currentPage,setCurrentPage] = useState<number>(1);
     const [fetching,setFetching] = useState<boolean>(true);
 
     React.useEffect(() => {
-        getNewImages<ICard[]>('https://jsonplaceholder.typicode.com/photos?_limit=6&_page='+currentPage.toString()).then(
+        getNewImages<ICard[]>(currentPage.toString()).then(
             (data) => {
                 arrRequest=data
                 setImages(images.concat(arrRequest))
@@ -37,7 +32,7 @@ function App() {
           <div className="intro">
               <div className="maincontant">
                   <div className="cardcontainer">
-                          <AllCards items={images} />
+                          <CardList items={images} />
                   </div>
               </div>
               <div className="footer">

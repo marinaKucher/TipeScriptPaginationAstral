@@ -5,13 +5,16 @@ export interface ICard{
     title: string,
     url: string
 }
+
 export interface ICardProps{
     imageUrl:string;
     dateOfCreation:string;
 }
+
 export type IProps={
     liked:boolean
 }
+
 export interface ICardListProps{
     items : ICard[]
 }

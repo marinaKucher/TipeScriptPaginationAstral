@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from "../Card/Card"
-import { ICard,ICardListProps } from "../../types/types"
-import {css} from "@emotion/css";
-import getCurrentDate from "../../getCurrentDate";
+import { ICardListProps } from "../../types/types"
+import { css } from "@emotion/css";
+import calcDate from "../../calcDate";
 
 const CardList : React.FC<ICardListProps> = (props ) => {
    return <div className={css`
@@ -20,7 +20,7 @@ const CardList : React.FC<ICardListProps> = (props ) => {
     `}>
        {
            props.items.map( item =>
-               <Card key={ props.items.indexOf(item)}  dateOfCreation={getCurrentDate(item.id)} imageUrl={item.thumbnailUrl} />
+               <Card key={ props.items.indexOf(item)} dateOfCreation={calcDate(item.id)} imageUrl={item.thumbnailUrl} />
            )
        }
    </div>

@@ -1,10 +1,10 @@
-function getCurrentDate(id:number): string{
+function calcDate(id:number): string{
     let date= new Date();
     date.setDate(date.getDate() + id-1);
     return (date.toLocaleString("ru", {
-        year: 'numeric',
         month: 'long',
         day: 'numeric'
-    }));
+    })+ " "+ date.getFullYear()  +" года");
 }
-export default getCurrentDate
+
+export default calcDate
